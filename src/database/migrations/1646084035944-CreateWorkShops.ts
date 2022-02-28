@@ -7,8 +7,10 @@ export class CreateWorkShops1646084035944 implements MigrationInterface {
       columns: [
         {
           name: 'id',
-          type: 'uuid',
+          type: 'integer',
           isPrimary: true,
+          isGenerated: true,
+          generationStrategy: 'increment',
         },
         {
           name: 'title',
@@ -45,7 +47,7 @@ export class CreateWorkShops1646084035944 implements MigrationInterface {
         },
         {
           name: 'event_id',
-          type: 'uuid',
+          type: 'integer',
         },
       ],
       foreignKeys: [
